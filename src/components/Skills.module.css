@@ -1,0 +1,135 @@
+.skills {
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 40px 0;
+  position: relative;
+}
+
+.skillsContainer {
+  max-width: 900px;
+}
+
+.badgeCenter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.introBadge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skillsTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background: var(--card-bg);
+  padding: 35px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.serviceCard:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(128, 128, 0, 0.2);
+}
+
+.highlightCard {
+  border-color: var(--accent-color);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.serviceDescription {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.serviceTools {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.serviceTools strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .skillsTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skillsTitle {
+    font-size: 2rem;
+  }
+
+  .serviceCard {
+    padding: 30px 25px;
+  }
+
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 60px 0;
+  }
+
+  .skillsTitle {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .serviceCard {
+    padding: 25px 20px;
+  }
+}

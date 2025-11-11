@@ -1,0 +1,232 @@
+.hero {
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 30px 0 10px;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profileContainer {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+/* Hero Main Content */
+.heroMain {
+  padding-top: 20px;
+}
+
+.introBadge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-family: math;
+}
+
+.uiDeveloper {
+  font-size: 3rem;
+}
+
+.nameHighlight {
+  color: var(--accent-color);
+  font-family: 'Baskerville', 'Libre Baskerville', serif;
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+  animation: charFadeIn 0.8s ease-out calc(var(--char-index) * 0.1s) both, dance 5s ease-in-out infinite calc(var(--char-index) * 0.1s);
+}
+
+@keyframes charFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dance {
+  0%, 100% {
+    font-weight: normal;
+  }
+  50% {
+    font-weight: bold;
+  }
+}
+
+.heroDescription {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.btnHire,
+.btnDownload {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btnHire {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+.btnHire:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(128, 128, 0, 0.3);
+}
+
+.btnDownload {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btnDownload:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.statItem {
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.statLabel {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.statValue {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .btnHire,
+  .btnDownload {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileImage {
+    width: 120px;
+    height: 120px;
+  }
+}

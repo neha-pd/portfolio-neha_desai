@@ -1,0 +1,244 @@
+.footer {
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.footerContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footerCard {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 20px 60px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.footerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Left Content */
+.footerLeft {
+  padding-top: 20px;
+}
+
+.introBadge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #808000;
+  border-radius: 20px;
+  color: #808000;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.footerTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contactIcon {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #808000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactIcon i {
+  font-size: 1.5rem;
+  color: #808000;
+}
+
+.contactLabel {
+  color: #808000;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.contactEmail {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactEmail:hover {
+  color: #808000;
+}
+
+/* Right Content - Contact Form */
+.footerRight {
+  padding-top: 20px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.formRow.twoCols {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.formInput.fullWidth {
+  width: 100%;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: var(--text-muted);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-bottom-color: #808000;
+  background: none;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fileUpload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fileUpload:hover {
+  color: #808000;
+}
+
+.fileUpload i {
+  font-size: 1.2rem;
+}
+
+.btnSubmit {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.btnSubmit:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+@media (max-width: 1200px) {
+  .footerCard {
+    padding: 40px;
+  }
+
+  .footerWrapper {
+    gap: 50px;
+  }
+
+  .footerTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .footerCard {
+    padding: 35px;
+  }
+
+  .footerWrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footerTitle {
+    font-size: 1.8rem;
+  }
+
+  .formRow.twoCols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 60px 0;
+  }
+
+  .footerCard {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .footerTitle {
+    font-size: 2rem;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btnSubmit {
+    width: 100%;
+  }
+}

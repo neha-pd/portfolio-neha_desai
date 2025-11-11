@@ -1,0 +1,186 @@
+.education {
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.educationContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.educationWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.educationLeft {
+  padding-top: 20px;
+}
+
+.introBadge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.educationTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.educationRight {
+  padding-top: 20px;
+}
+
+.educationGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.educationCard {
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.educationCard:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.educationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.degreeIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.degreeIcon i {
+  font-size: 2rem;
+  color: var(--bg-primary);
+}
+
+.educationInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.institutionName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.degreeTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.educationDuration {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.educationDuration::before {
+  content: '📅';
+  font-size: 0.9rem;
+}
+
+.educationLocation {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.educationLocation i {
+  color: var(--accent-color);
+}
+
+@media (max-width: 1200px) {
+  .educationWrapper {
+    gap: 60px;
+  }
+
+  .educationTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .educationWrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .educationTitle {
+    font-size: 2.2rem;
+  }
+
+  .educationGrid {
+    gap: 25px;
+  }
+
+  .educationCard {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .education {
+    padding: 60px 0;
+  }
+
+  .educationTitle {
+    font-size: 2rem;
+  }
+
+  .educationGrid {
+    gap: 20px;
+  }
+
+  .educationCard {
+    padding: 25px;
+  }
+
+  .institutionName {
+    font-size: 1.3rem;
+  }
+
+  .degreeTitle {
+    font-size: 1rem;
+  }
+}
